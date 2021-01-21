@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'IconCard.dart';
+import 'CardBox.dart';
 
 const Color cardBoxColor = Color(0xFF323243);
 const Color bottomContainerColor = Color(0xFFD64C68);
@@ -23,10 +26,18 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                     child: CardBox(
                   color: cardBoxColor,
+                  child: IconCard(
+                    label: "MALE",
+                    icon: FontAwesomeIcons.mars,
+                  ),
                 )),
                 Expanded(
                     child: CardBox(
                   color: cardBoxColor,
+                  child: IconCard(
+                    label: "FEMALE",
+                    icon: FontAwesomeIcons.venus,
+                  ),
                 )),
               ],
             ),
@@ -58,20 +69,6 @@ class _InputPageState extends State<InputPage> {
           )
         ],
       ),
-    );
-  }
-}
-
-class CardBox extends StatelessWidget {
-  CardBox({@required this.color});
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15),
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(10), color: color),
     );
   }
 }

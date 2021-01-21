@@ -1,4 +1,5 @@
-# BMI Calculator
+# BMI Calculator ([Flutter: Part 7 Building UIs](https://www.appbrewery.co/p/flutter-development-bootcamp-with-dart)
+[![BCH compliance](https://bettercodehub.com/edge/badge/devasworski/bmi-calculator-flutter?branch=master)](https://bettercodehub.com/)
 
 This is a app created as part of the [London App Brewery: Complete Flutter Development Bootcamp](https://www.appbrewery.co/p/flutter-development-bootcamp-with-dart), I have attended on [LinkedInLearning](https://www.linkedin.com/learning/flutter-part-07-building-the-ui-or-flutter-part-07-building-uis/how-to-use-flutter-themes?u=2374954).
 
