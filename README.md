@@ -12,7 +12,7 @@ A Body Mass Index Calculator inspired by the designs made by [Ruben Vaalt](https
 
 ![Finished App Image](https://github.com/londonappbrewery/Images/blob/master/bmi-calc-demo.gif)
 
-## What I will learned
+## What I learned
 
 - How to use Flutter themes to create coherent branding. 
 - How to create multi-page apps using Flutter Routes and Navigator.
