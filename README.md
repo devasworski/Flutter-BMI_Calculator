@@ -6,7 +6,7 @@ This is a app created as part of the [London App Brewery: Complete Flutter Devel
 
 The objective of this tutorial was to look at how one we can customise Flutter Widgets to achieve customised beautiful user interface designs.
 
-## What was done create
+## What was done
 
 A Body Mass Index Calculator inspired by the designs made by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator). It is a multi screen app with simple functionality but full-on custom UI/UX design. 
 
