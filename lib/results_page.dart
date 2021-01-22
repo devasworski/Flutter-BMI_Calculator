@@ -3,10 +3,14 @@ import 'package:bmi_calculator/components/const.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
-  String result = "OVERWEIGHT";
-  double resultValue = 26.7;
-  String resultText =
-      "You have higher then normal body weight. Try to exercise more.";
+  ResultsPage(
+      {@required this.result,
+      @required this.resultValue,
+      @required this.resultText});
+
+  final String result;
+  final String resultValue;
+  final String resultText;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,7 @@ class ResultsPage extends StatelessWidget {
                       color: Colors.green),
                 ),
                 Text(
-                  "26.7",
+                  resultValue,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 100,

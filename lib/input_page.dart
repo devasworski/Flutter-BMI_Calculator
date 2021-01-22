@@ -1,9 +1,11 @@
+import 'package:bmi_calculator/results_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/IconCard.dart';
 import 'components/CardBox.dart';
 import 'components/const.dart';
 import 'components/roundIconButton.dart';
+import 'calculator.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -210,7 +212,16 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/result');
+              Calculator cal = Calculator(height: height, weight: weight);
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ResultsPage(
+                            result: cal.getResult(),
+                            resultValue: cal.getBmiValue(),
+                            resultText: cal.getResultText(),
+                          )));
             },
             child: Container(
               color: kBottomContainerColor,
