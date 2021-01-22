@@ -3,7 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'IconCard.dart';
 import 'CardBox.dart';
 
-const Color cardBoxColor = Color(0xFF323243);
+const Color activecardBoxColor = Color(0xFF323243);
+const Color inactivecardBoxColor = Color(0xFF242639);
 const Color bottomContainerColor = Color(0xFFD64C68);
 
 class InputPage extends StatefulWidget {
@@ -12,6 +13,28 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardBoxColor = inactivecardBoxColor;
+  Color femaleCardBoxColor = inactivecardBoxColor;
+
+  void selectGender({String gender}) {
+    setState(() {
+      switch (gender) {
+        case "male":
+          maleCardBoxColor = activecardBoxColor;
+          femaleCardBoxColor = inactivecardBoxColor;
+          break;
+        case "female":
+          maleCardBoxColor = inactivecardBoxColor;
+          femaleCardBoxColor = activecardBoxColor;
+          break;
+        default:
+          maleCardBoxColor = inactivecardBoxColor;
+          femaleCardBoxColor = inactivecardBoxColor;
+          break;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,19 +47,29 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                    child: CardBox(
-                  color: cardBoxColor,
-                  child: IconCard(
-                    label: "MALE",
-                    icon: FontAwesomeIcons.mars,
+                    child: GestureDetector(
+                  onTap: () {
+                    selectGender(gender: "male");
+                  },
+                  child: CardBox(
+                    color: maleCardBoxColor,
+                    child: IconCard(
+                      label: "MALE",
+                      icon: FontAwesomeIcons.mars,
+                    ),
                   ),
                 )),
                 Expanded(
-                    child: CardBox(
-                  color: cardBoxColor,
-                  child: IconCard(
-                    label: "FEMALE",
-                    icon: FontAwesomeIcons.venus,
+                    child: GestureDetector(
+                  onTap: () {
+                    selectGender(gender: "female");
+                  },
+                  child: CardBox(
+                    color: femaleCardBoxColor,
+                    child: IconCard(
+                      label: "FEMALE",
+                      icon: FontAwesomeIcons.venus,
+                    ),
                   ),
                 )),
               ],
@@ -44,18 +77,18 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
               child: CardBox(
-            color: cardBoxColor,
+            color: activecardBoxColor,
           )),
           Expanded(
             child: Row(
               children: [
                 Expanded(
                     child: CardBox(
-                  color: cardBoxColor,
+                  color: activecardBoxColor,
                 )),
                 Expanded(
                     child: CardBox(
-                  color: cardBoxColor,
+                  color: activecardBoxColor,
                 )),
               ],
             ),
