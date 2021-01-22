@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'IconCard.dart';
-import 'CardBox.dart';
-import 'const.dart';
+import 'components/IconCard.dart';
+import 'components/CardBox.dart';
+import 'components/const.dart';
+import 'components/roundIconButton.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _InputPageState extends State<InputPage> {
   Gender selectedgender;
   int height = 180;
   int weight = 60;
-  int age = 30;
+  int age = 25;
 
   @override
   Widget build(BuildContext context) {
@@ -216,35 +217,16 @@ class _InputPageState extends State<InputPage> {
               margin: EdgeInsets.only(top: 10),
               width: double.infinity,
               height: 80,
+              padding: EdgeInsets.only(bottom: 20),
               child: Center(
                 child: Text(
                   'CALCULATE',
+                  style: kLargeButtonTextStyle,
                 ),
               ),
             ),
           )
         ],
-      ),
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({@required this.onPressed, this.iconData});
-
-  final Function onPressed;
-  final IconData iconData;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      child: Icon(iconData),
-      onPressed: onPressed,
-      shape: CircleBorder(),
-      fillColor: Color(0xFF5D5F6D),
-      constraints: BoxConstraints.tightFor(
-        width: 56,
-        height: 56,
       ),
     );
   }
