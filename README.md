@@ -15,7 +15,7 @@ The objective of this tutorial was to look at how one can customise Flutter Widg
 
 A Body Mass Index Calculator inspired by the designs made by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator). It is a multi screen app with simple functionality and a fully customised UI design. 
 
-![Finished App Image](https://github.com/londonappbrewery/Images/blob/master/bmi-calc-demo.gif)
+![Finished App Image](https://dev-sworski.com/wp-content/uploads/2021/01/ezgif.com-gif-maker.gif)
 
 ## Learning outcomes
 
