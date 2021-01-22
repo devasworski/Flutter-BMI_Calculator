@@ -6,6 +6,7 @@ import 'CardBox.dart';
 const Color activecardBoxColor = Color(0xFF323243);
 const Color inactivecardBoxColor = Color(0xFF242639);
 const Color bottomContainerColor = Color(0xFFD64C68);
+enum Gender { female, male }
 
 class InputPage extends StatefulWidget {
   @override
@@ -16,14 +17,14 @@ class _InputPageState extends State<InputPage> {
   Color maleCardBoxColor = inactivecardBoxColor;
   Color femaleCardBoxColor = inactivecardBoxColor;
 
-  void selectGender({String gender}) {
+  void selectGender({Gender gender}) {
     setState(() {
       switch (gender) {
-        case "male":
+        case Gender.male:
           maleCardBoxColor = activecardBoxColor;
           femaleCardBoxColor = inactivecardBoxColor;
           break;
-        case "female":
+        case Gender.female:
           maleCardBoxColor = inactivecardBoxColor;
           femaleCardBoxColor = activecardBoxColor;
           break;
@@ -49,7 +50,7 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                     child: GestureDetector(
                   onTap: () {
-                    selectGender(gender: "male");
+                    selectGender(gender: Gender.male);
                   },
                   child: CardBox(
                     color: maleCardBoxColor,
@@ -62,7 +63,7 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                     child: GestureDetector(
                   onTap: () {
-                    selectGender(gender: "female");
+                    selectGender(gender: Gender.female);
                   },
                   child: CardBox(
                     color: femaleCardBoxColor,
